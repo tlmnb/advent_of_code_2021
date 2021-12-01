@@ -11,7 +11,10 @@ object Day1 {
       case _ :: Nil => c
       case h :: n :: t => solution1(n :: t, if (n > h) c+1 else c)
     }
+  }
 
+  def solution1Alternative(lines: List[Int]): Int = {
+    lines.sliding(2).map(l => if(l.last > l.head) 1 else 0).sum
   }
 
   @tailrec
@@ -20,6 +23,10 @@ object Day1 {
       case _ :: _ :: _ :: Nil => count
       case a :: b :: c :: d => solution2(b::c::d, a+b+c, if(a+b+c>lastSum) count + 1 else count)
     }
+  }
+
+  def solution2Alternative(lines: List[Int]): Int = {
+    lines.sliding(3).map(_.sum).sliding(2).map(l => if(l.last > l.head) 1 else 0).sum
   }
 
   def main(args: Array[String]): Unit = {
