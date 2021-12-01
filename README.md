@@ -1,5 +1,6 @@
 # 🎄 Advent of Code 2021
 Solutions for the Advent of Code
+
 ![Scala CI](https://github.com/tlmnb/advent_of_code_2020/workflows/Scala%20CI/badge.svg)
 
 ## Solutions
