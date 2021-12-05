@@ -16,7 +16,7 @@ object Day5 {
       val y = Range.inclusive(p1._2, p2._2, if(p1._2<p2._2) 1 else -1)
       x.zip(y).toList
     } else {
-      throw new IllegalArgumentException("cannot create horizontal or vertical line")
+      throw new IllegalArgumentException("cannot create horizontal, vertical or diagonal line")
     }
   }
 
