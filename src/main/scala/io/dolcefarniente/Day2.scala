@@ -11,6 +11,7 @@ object Day2 {
       case ("forward", arg)::t => solution1(t, horizontal+arg, depth)
       case ("down", arg)::t => solution1(t, horizontal, depth+arg)
       case ("up", arg)::t => solution1(t, horizontal, depth-arg)
+      case (any, _)::_ => throw new IllegalArgumentException(s"$any is not a valid command")
       case Nil => horizontal * depth
     }
   }
@@ -21,6 +22,7 @@ object Day2 {
       case ("forward", arg)::t => solution2(t, horizontal+arg, depth + arg*aim, aim)
       case ("down", arg)::t => solution2(t, horizontal, depth, aim+arg)
       case ("up", arg)::t => solution2(t, horizontal, depth, aim-arg)
+      case (any, _)::_ => throw new IllegalArgumentException(s"$any is not a valid command")
       case Nil => horizontal * depth
     }
   }
