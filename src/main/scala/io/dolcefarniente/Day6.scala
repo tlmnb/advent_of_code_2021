@@ -15,13 +15,9 @@ object Day6 {
     override def hasNext: Boolean = true
 
     override def next(): Long = {
-      fish.dequeue match {
-        case 0 =>
-          fish.enqueue(0)
-        case f =>
-          fish(6) += f
-          fish.enqueue(f)
-      }
+      val f = fish.dequeue
+      fish(6) += f
+      fish.enqueue(f)
       fish.sum
     }
   }
