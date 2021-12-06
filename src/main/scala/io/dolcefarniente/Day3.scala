@@ -10,7 +10,7 @@ object Day3 {
     @tailrec
     def apply(report: List[String], bitCount: List[(Int, Int)] = List()): List[(Int, Int)] = {
       report match {
-        case h::t => {
+        case h::t =>
           val bits = h.map {
             case '0' => (1, 0)
             case '1' => (0, 1)
@@ -19,7 +19,6 @@ object Day3 {
           apply(t, bitCount
             .zipAll(bits, (0, 0), (0, 0))
             .map(a => (a._1._1 + a._2._1 , a._1._2 + a._2._2)))
-        }
         case Nil =>
           bitCount
       }
@@ -51,8 +50,8 @@ object Day3 {
     val oxygen = search(report, t => if(t._2 >= t._1) '1' else '0')
     val o2 = Integer.parseInt(oxygen, 2)
 
-    val carbondioxide = search(report, t => if(t._1 <= t._2) '0' else '1')
-    val co2 = Integer.parseInt(carbondioxide, 2)
+    val carbonDioxide = search(report, t => if(t._1 <= t._2) '0' else '1')
+    val co2 = Integer.parseInt(carbonDioxide, 2)
     co2 * o2
   }
 

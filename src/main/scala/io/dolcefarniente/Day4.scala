@@ -71,8 +71,6 @@ object Day4 {
 
   }
 
-
-
   def main(args: Array[String]): Unit = {
     val src = Source.fromResource("day4")
     val lines = try src.getLines().toList finally src.close()

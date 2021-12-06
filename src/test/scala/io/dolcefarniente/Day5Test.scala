@@ -4,7 +4,7 @@ import org.scalatest.FunSuite
 
 class Day5Test extends FunSuite {
 
-  test("Day 5 -- getCoords") {
+  test("Day 5 -- getCoordinates") {
     val coords = Day5.getCoordinates((0,9), (5,9))
     assert(coords == List((0,9), (1,9), (2,9), (3,9), (4,9), (5,9)))
     val reverse = Day5.getCoordinates((5,9), (0,9))

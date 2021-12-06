@@ -5,7 +5,7 @@ import scala.io.Source
 
 object Day6 {
 
-  class LanternfishIterator(private val init: List[Int]) extends AbstractIterator[Long] {
+  class LanternFishIterator(private val init: List[Int]) extends AbstractIterator[Long] {
 
     private val fish = init.foldLeft(mutable.Queue.fill(9){0L})((q,v) => {
       q(v)+=1L
@@ -27,11 +27,11 @@ object Day6 {
   }
 
   def solution1(init: List[Int]): Long = {
-    new LanternfishIterator(init).take(80).toList.last
+    new LanternFishIterator(init).take(80).toList.last
   }
 
   def solution2(init: List[Int]): Long = {
-    new LanternfishIterator(init).take(256).toList.last
+    new LanternFishIterator(init).take(256).toList.last
   }
 
   def main(args: Array[String]): Unit = {
