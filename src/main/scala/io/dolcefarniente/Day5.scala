@@ -37,13 +37,16 @@ object Day5 {
       .count(t => t._2 > 1)
   }
 
+
   def solution1(coordinates: List[((Int, Int), (Int, Int))]): Int =
     solution(coordinates
       .filter(p => p._1._1 == p._2._1 || p._1._2 == p._2._2 ))
 
+
   def solution2(coordinates: List[((Int, Int), (Int, Int))]): Int =
     solution(coordinates
       .filter(p => p._1._1 == p._2._1 || p._1._2 == p._2._2|| Math.abs(p._1._1 - p._2._1) == Math.abs(p._1._2 - p._2._2)))
+
 
   def main(args: Array[String]): Unit = {
     val src = Source.fromResource("day5")
