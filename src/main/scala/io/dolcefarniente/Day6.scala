@@ -18,9 +18,9 @@ object Day6 {
       val first = fish.dequeue
       if(first > 0) {
         fish(6) += first
-        fish.append(first)
+        fish.enqueue(first)
       } else {
-        fish.append(0)
+        fish.enqueue(0)
       }
       fish.sum
     }

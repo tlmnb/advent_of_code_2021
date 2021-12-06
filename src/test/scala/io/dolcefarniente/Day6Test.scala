@@ -18,9 +18,9 @@ class Day6Test extends FunSuite {
   }
 
   test("After 256 Days") {
-    val lanternfish = new LanternfishIterator(List(3, 4, 3, 1, 2))
-    val day80 = lanternfish.take(256).toList.last
-    assert(day80 == 26984457539L)
+    val lanternfish = new LanternfishIterator(List(3,4,3,1,2))
+    val day256 = lanternfish.take(256).toList.last
+    assert(day256 == 26984457539L)
   }
 
 }
