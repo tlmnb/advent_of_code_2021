@@ -10,3 +10,4 @@ Solutions for the Advent of Code
 - [Day 4](https://github.com/tlmnb/advent_of_code_2021/blob/main/src/main/scala/io/dolcefarniente/Day4.scala)
 - [Day 5](https://github.com/tlmnb/advent_of_code_2021/blob/main/src/main/scala/io/dolcefarniente/Day5.scala)
 - [Day 6](https://github.com/tlmnb/advent_of_code_2021/blob/main/src/main/scala/io/dolcefarniente/Day6.scala)
+- [Day 7](https://github.com/tlmnb/advent_of_code_2021/blob/main/src/main/scala/io/dolcefarniente/Day7.scala)
